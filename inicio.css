@@ -224,18 +224,6 @@ p {
         width: auto;
     }
 
-    #progressbar {
-        width: 0%;
-        visibility: hidden;
-        height: 0%;
-    }
-
-    #scrollPath {
-        width: 0%;
-        visibility: hidden;
-        height: 0%;
-    }
-
     .minha {
         width: 0%;
         visibility: hidden;
@@ -250,34 +238,30 @@ p {
 
 @media (max-width:450px) {
 
+    body {
+        margin: 1%;
+    }
+
     .cabecalho {
         display: flex;
         justify-content: center;
-        padding: 5%;
     }
 
     .cabecalho_link {
         justify-content: center;
-
+        padding: 2% 0% 0% 0%;
     }
 
     .cabecalho_menu {
         display: flex;
         justify-content: center;
-        font-size: 16px;
+        font-size: 18px;
         font-weight: bold;
     }
 
     .presentation {
         flex-direction: column-reverse;
-        padding: 5%;
-        margin: 10%;
-    }
-
-    .section {
-        width: 100%;
-        padding: 5%;
-        margin: 10%;
+        margin: 5%;
     }
 
     .minha {
@@ -290,24 +274,13 @@ p {
         visibility: hidden;
     }
 
-    #progressbar {
-        width: 0%;
-        visibility: hidden;
-        height: 0%;
-    }
-
-    #scrollPath {
-        width: 0%;
-        visibility: hidden;
-        height: 0%;
-    }
-
 }
 
-@media (max-width:1300px) {
+@media (max-width:1500px) {
 
     .cabecalho {
-        padding: 10%;
+        margin: 0% 0% 0% 0%;
+        padding: 5%;
     }
 
     .cabecalho_link {
@@ -316,7 +289,7 @@ p {
 
     .presentation {
         flex-direction: column-reverse;
-        padding: 5%;
+        margin: 1% 1% 10% 1%;
     }
 
     .section {
@@ -331,17 +304,5 @@ p {
     .minha__ {
         width: 0%;
         visibility: hidden;
-    }
-
-    #progressbar {
-        width: 0%;
-        visibility: hidden;
-        height: 0%;
-    }
-
-    #scrollPath {
-        width: 0%;
-        visibility: hidden;
-        height: 0%;
     }
 }
