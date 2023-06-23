@@ -18,7 +18,7 @@
 * {
     margin: 0;
     padding: 0;
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -224,6 +224,28 @@ p {
         width: auto;
     }
 
+    #progressbar {
+        width: 0%;
+        visibility: hidden;
+        height: 0%;
+    }
+
+    #scrollPath {
+        width: 0%;
+        visibility: hidden;
+        height: 0%;
+    }
+
+    .minha {
+        width: 0%;
+        visibility: hidden;
+    }
+
+    .minha__ {
+        width: 0%;
+        visibility: hidden;
+    }
+
 }
 
 @media (max-width:450px) {
@@ -259,13 +281,27 @@ p {
     }
 
     .minha {
-        width: 15rem;
+        width: 0%;
+        visibility: hidden;
     }
 
     .minha__ {
-        width: 15rem;
+        width: 0%;
         visibility: hidden;
     }
+
+    #progressbar {
+        width: 0%;
+        visibility: hidden;
+        height: 0%;
+    }
+
+    #scrollPath {
+        width: 0%;
+        visibility: hidden;
+        height: 0%;
+    }
+
 }
 
 @media (max-width:1300px) {
@@ -288,11 +324,24 @@ p {
     }
 
     .minha {
-        width: 15rem;
+        width: 0%;
+        visibility: hidden;
     }
 
     .minha__ {
-        width: 15rem;
+        width: 0%;
         visibility: hidden;
+    }
+
+    #progressbar {
+        width: 0%;
+        visibility: hidden;
+        height: 0%;
+    }
+
+    #scrollPath {
+        width: 0%;
+        visibility: hidden;
+        height: 0%;
     }
 }
