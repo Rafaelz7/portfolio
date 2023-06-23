@@ -10,6 +10,8 @@
 </head>
 
 <body>
+    <div id="progressbar"></div>
+    <div id="scrollPath"></div>
 
     <header class="cabecalho">
         <nav class="cabecalho_link">
@@ -62,9 +64,14 @@
         <img class="minha__" src="./assets/rafael.png" alt="RafaelFoto">
     </main>
 
-    <footer class="rodape">
-        developed by Rafael Marçal
-    </footer>
+    <script type="text/javascript">
+        let progress = document.getElementById('progressbar');
+        let totalHeight = document.body.scrollHeight - window.innerHeight;
+        window.onscroll = function () {
+            let progressHeight = (window.pageYOffset / totalHeight) * 100;
+            progress.style.height = progressHeight + "%";
+        }
+    </script>
 
 </body>
 

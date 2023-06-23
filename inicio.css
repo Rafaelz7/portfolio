@@ -1,26 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
 
     --cor-primaria: #1c1c1c;
-    --cor-secundaria: #f6f6f6;
-    --cor-terciaria: #3a589a;
-    --cor-hover: #1d3259;
+    --cor-secundaria: #fff;
+    --cor-terciaria: #2165b2;
 
     /* --cor-primaria: #1c1c1c;
     --cor-secundaria: #f6f6f6;
     --cor-terciaria: #3d8485;
-    --cor-hover: #176977; */
 
     /* --cor-primaria: #1c1c1c;
     --cor-secundaria: #f6f6f6;
-    --cor-terciaria: #fbff00;
-    --cor-hover: #cccc09;*/
+    /* --cor-terciaria: #fbff00; */
 }
 
 * {
     margin: 0;
     padding: 0;
+    /* box-sizing: border-box; */
+    font-family: 'Poppins', sans-serif;
 }
 
 .cabecalho {
@@ -33,23 +32,77 @@
 }
 
 .cabecalho_menu {
-
-    font-family: 'montserrat', sans-serif;
     font-size: 1.3rem;
     font-weight: bold;
-    color: var(--cor-terciaria);
+    color: var(--cor-secundaria);
     text-decoration: none;
 }
 
 body {
-    /* height: 100vh; */
-    /* width: 100%; */
-    background-color: var(--cor-primaria);
+    background: linear-gradient(330deg, #00009a, #010e1e, #ff0000);
+    background-size: 100vw;
+    background-repeat: no-repeat;
     color: var(--cor-secundaria);
 }
 
+::-webkit-scrollbar {
+    width: 0;
+}
+
+#scrollPath {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+#progressbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    background: linear-gradient(to top, #009aff, #00ffe7);
+    animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+
+    0%,
+    100% {
+        filter: hue-rotate(0deg);
+    }
+
+    50% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+#progressbar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #0099ff, #00ffe7);
+    filter: blur(10px);
+}
+
+#progressbar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #009aff, #00ffe7);
+    filter: blur(30px);
+}
+
 .strong {
-    color: var(--cor-terciaria);
+    color: #0800ff;
 }
 
 p {
@@ -71,13 +124,11 @@ p {
 }
 
 .principal_text {
-    font-family: 'Krona One', 'sans-serif';
     font-size: 2.5rem;
 }
 
 .second_text {
     font-size: 1.563rem;
-    font-family: 'mont-serrat', 'sans-serif';
 }
 
 .button {
@@ -89,7 +140,6 @@ p {
 }
 
 .links_subtitulo {
-    font-family: 'Krona One', 'sans-serif';
     font-weight: 400;
     font-size: 1.5rem;
 }
@@ -107,7 +157,6 @@ p {
     font-weight: 600;
     border-radius: 0.5rem;
     padding: 1.344rem 0;
-    font-family: 'mont-serrat', 'sans-serif';
     box-shadow: 0 0 .2rem var(--cor-secundaria),
         0 0 .2rem var(--cor-secundaria),
         0 0 2rem var(--cor-terciaria),
@@ -116,16 +165,11 @@ p {
         inset 0 0 1.2rem var(--cor-terciaria);
 }
 
-.redes:hover {
-    padding: 3%;
-    background-color: var(--cor-hover);
-}
-
 .minha {
-    /* position: fixed; */
-    /* left: 65%; */
-    /* top: 18%; */
-    width: 25rem;
+    position: absolute;
+    left: 62%;
+    bottom: 22%;
+    width: 29rem;
     background: var(--cor-primaria);
     border-radius: 50%;
     box-shadow: 0 0 .2rem var(--cor-secundaria),
@@ -137,21 +181,11 @@ p {
 
 }
 
-.rodape {
-    padding: 1.375rem;
-    color: var(--cor-primaria);
-    background-color: var(--cor-terciaria);
-    text-align: center;
-    font-family: 'montserrat', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 400;
-}
-
 .minha__ {
     position: fixed;
     left: 65%;
     top: 18%;
-    width: 25rem;
+    width: 26rem;
     background: var(--cor-primaria);
     border-radius: 50%;
     box-shadow: 0 0 .2rem var(--cor-secundaria),
@@ -164,13 +198,11 @@ p {
 }
 
 .principal__text {
-    font-family: 'Krona One', 'sans-serif';
     font-size: 1.75rem;
 }
 
 .second__text {
     font-size: 1.25rem;
-    font-family: 'mont-serrat', 'sans-serif';
 }
 
 @media (max-width:75rem) {
